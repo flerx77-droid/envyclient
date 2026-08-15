@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnvyClient — Premium Minecraft Client</title>
+    <meta name="description" content="EnvyClient — премиальный клиент для Minecraft 1.21.4. Чистые обходы, продвинутый HUD, система конфигов и максимальный FPS. Сейчас в альфа-тестировании.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="stars"></canvas>
+
+    <header class="nav">
+        <div class="nav-inner">
+            <a href="#top" class="brand">
+                <img class="brand-logo" src="img/logo.png" alt="EnvyClient">
+                <span class="brand-name">ENVY<span class="brand-accent">CLIENT</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#features">Возможности</a>
+                <a href="#modules">Модули</a>
+                <a href="#hud">HUD</a>
+                <a href="#screenshots">Скриншоты</a>
+                <a href="#install">Установка</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="https://github.com/flerx77-droid/envyclient/releases/download/v1.0.0/EnvyClient-Setup-1.0.0.exe" class="btn btn-accent nav-download">Скачать</a>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <div class="hero-inner reveal">
+                <span class="hero-badge">ALPHA · v1.0 · Minecraft 1.21.4</span>
+                <h1 class="hero-title">ENVY<span class="accent">CLIENT</span></h1>
+                <p class="hero-sub">Премиальный клиент для Minecraft 1.21.4 с собственным лаунчером.
+                    Чистые обходы античитов, кастомный HUD с двумя режимами, система конфигов
+                    и максимальный FPS.</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/flerx77-droid/envyclient/releases/download/v1.0.0/EnvyClient-Setup-1.0.0.exe" class="btn btn-accent btn-lg">Скачать лаунчер</a>
+                    <a href="#install" class="btn btn-ghost btn-lg">Как установить</a>
+                </div>
+                <div class="hero-shot">
+                    <div class="hero-shot-frame">
+                        <img src="img/menu.png" alt="Меню EnvyClient">
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-num">76</span><span class="stat-label">модулей</span></div>
+                    <div class="stat"><span class="stat-num">5</span><span class="stat-label">категорий</span></div>
+                    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">тем меню</span></div>
+                    <div class="stat"><span class="stat-num">3</span><span class="stat-label">пресета конфигов</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALPHA NOTICE -->
+        <section class="notice-wrap reveal">
+            <div class="notice">
+                <span class="notice-icon svg svg-warn"></span>
+                <div>
+                    <b>Клиент в альфа-тестировании</b>
+                    <p>Возможны недоделки и недоработки. Античиты могут «жаловаться» на игроков —
+                        это часть тестового периода. Скачивая и используя EnvyClient, ты принимаешь
+                        ответственность на себя: автор за баны и последствия ответственности не несёт.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="section">
+            <div class="section-head reveal">
+                <span class="section-tag">Возможности</span>
+                <h2 class="section-title">Всё для победы</h2>
+                <p class="section-sub">Каждая деталь клиента сделана так, чтобы давать преимущество и выглядеть дорого.</p>
+            </div>
+            <div class="grid features-grid">
+                <div class="card reveal">
+                    <div class="card-icon svg svg-shield"></div>
+                    <h3>Обход античитов</h3>
+                    <p>Автоматический CheckBypass: при проверке сервера модули отключаются, а после — возвращаются. Sprint-фильтр против киков spookytime.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon svg svg-layout"></div>
+                    <h3>Кастомный HUD</h3>
+                    <p>Два режима — «Classic» и «Sleek». Перетаскивание элементов, бинды, зелья, стафф-лист, таргет-худ и ватермарка.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon svg svg-config"></div>
+                    <h3>Система конфигов</h3>
+                    <p>Сохранение и загрузка конфигов прямо из меню. Готовые пресеты PVP, PVE и Anarchy, шифрование файлов.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon svg svg-theme"></div>
+                    <h3>Темы и меню</h3>
+                    <p>Продвинутый ClickGUI с анимациями и множеством тем. Выбирай акцент и кастомизируй клиент под себя.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon svg svg-fps"></div>
+                    <h3>Оптимизация FPS</h3>
+                    <p>Умные анимации без лишней нагрузки, лёгкий рендер HUD и поддержка CrystalOptimizer для PVP-сражений.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon svg svg-gui"></div>
+                    <h3>Удобство каждый день</h3>
+                    <p>AutoRespawn, AutoAccept, FreeCam, NameProtect, предметы, тотемы и уведомления — всё, что нужно для игры.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULES -->
+        <section id="modules" class="section section-alt">
+            <div class="section-head reveal">
+                <span class="section-tag">Модули</span>
+                <h2 class="section-title">76 модулей в 5 категориях</h2>
+                <p class="section-sub">От комбата до рендера — мощная база для любых ситуаций.</p>
+            </div>
+            <div class="grid modules-grid">
+                <div class="card reveal">
+                    <div class="module-head"><span class="svg svg-sword"></span><h3>Combat</h3></div>
+                    <ul class="module-list">
+                        <li>AttackAura</li>
+                        <li>CrystallAura</li>
+                        <li>AutoTotem</li>
+                        <li>AutoExplosion</li>
+                        <li>ClickPearl</li>
+                        <li>PacketCriticals</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <div class="module-head"><span class="svg svg-sprint"></span><h3>Movement</h3></div>
+                    <ul class="module-list">
+                        <li>Speed</li>
+                        <li>GrimGlide</li>
+                        <li>ElytraBooster</li>
+                        <li>NoSlow</li>
+                        <li>SafeWalk</li>
+                        <li>AirStuck</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <div class="module-head"><span class="svg svg-eye"></span><h3>Render</h3></div>
+                    <ul class="module-list">
+                        <li>TargetESP</li>
+                        <li>Tracers</li>
+                        <li>CustomSky</li>
+                        <li>Particles</li>
+                        <li>StorageESP</li>
+                        <li>ViewModel</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <div class="module-head"><span class="svg svg-user"></span><h3>Player</h3></div>
+                    <ul class="module-list">
+                        <li>AutoTool</li>
+                        <li>AutoArmor</li>
+                        <li>FastBreak</li>
+                        <li>NoFall</li>
+                        <li>NoJumpDelay</li>
+                        <li>AutoRespawn</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <div class="module-head"><span class="svg svg-misc"></span><h3>Misc</h3></div>
+                    <ul class="module-list">
+                        <li>ServerHelper</li>
+                        <li>FreeCam</li>
+                        <li>NameProtect</li>
+                        <li>ChatHelper</li>
+                        <li>ClickFriend</li>
+                        <li>CrystalOptimizer</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- HUD -->
+        <section id="hud" class="section">
+            <div class="section-head reveal">
+                <span class="section-tag">HUD</span>
+                <h2 class="section-title">Два режима. Один стиль.</h2>
+                <p class="section-sub">Выбери классическое стекло или плоский современный вид — и перетаскивай элементы куда хочешь.</p>
+            </div>
+            <div class="hud-showcase">
+                <div class="hud-item reveal">
+                    <h3>Classic</h3>
+                    <div class="hud-shot-frame">
+                        <img src="img/hud-classic.png" alt="HUD Classic EnvyClient">
+                    </div>
+                </div>
+                <div class="hud-item reveal">
+                    <h3>Sleek</h3>
+                    <div class="hud-shot-frame">
+                        <img src="img/hud-sleek.png" alt="HUD Sleek EnvyClient">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREENSHOTS -->
+        <section id="screenshots" class="section section-alt">
+            <div class="section-head reveal">
+                <span class="section-tag">Скриншоты</span>
+                <h2 class="section-title">Взгляни на клиент</h2>
+                <p class="section-sub">Меню, которое появляется при первом входе. Больше скриншотов добавим по мере тестирования.</p>
+            </div>
+            <div class="gallery">
+                <figure class="gallery-item reveal">
+                    <img src="img/menu.png" alt="Меню EnvyClient при первом входе">
+                    <figcaption>Главное меню клиента — первый вход</figcaption>
+                </figure>
+                <div class="gallery-grid">
+                    <figure class="gallery-item reveal">
+                        <img src="img/hud-classic.png" alt="HUD Classic">
+                        <figcaption>HUD Classic</figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal">
+                        <img src="img/hud-sleek.png" alt="HUD Sleek">
+                        <figcaption>HUD Sleek</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTALL -->
+        <section id="install" class="section">
+            <div class="section-head reveal">
+                <span class="section-tag">Установка</span>
+                <h2 class="section-title">Играть за 3 шага</h2>
+                <p class="section-sub">Лаунчер сам скачает Minecraft 1.21.4, Fabric и все модули. Никакой ручной установки модов.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <span class="step-num">1</span>
+                    <h3>Скачай лаунчер</h3>
+                    <p>Нажми «Скачать лаунчер» и запусти <code>EnvyClient-Setup-1.0.0.exe</code> — установщик сделает всё сам.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step-num">2</span>
+                    <h3>Запусти и настрой</h3>
+                    <p>Открой <code>EnvyClient.exe</code>, введи ник и выбери объём оперативной памяти.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step-num">3</span>
+                    <h3>Играй</h3>
+                    <p>Нажми «Играть» — лаунчер скачает и запустит всё сам. В игре меню клиента — клавиша <b>RShift</b>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+            <div class="section-head reveal">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Частые вопросы</h2>
+            </div>
+            <div class="faq">
+                <div class="faq-item reveal">
+                    <button class="faq-q">Клиент стабильный? Это альфа?<span class="faq-arrow"></span></button>
+                    <div class="faq-a"><p>Сейчас идёт <b>альфа-тестирование</b>: возможны недоделки и недоработки. Античиты могут «жаловаться» на игроков. Используя клиент, ты принимаешь ответственность на себя — автор за баны и последствия не отвечает.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">Как запустить клиент?<span class="faq-arrow"></span></button>
+                    <div class="faq-a"><p>Скачай лаунчер и нажми «Играть». Он сам скачает Minecraft 1.21.4, Fabric и модули — ничего ставить вручную не нужно. Нужна установленная Java 17+.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">Это безопасно? Меня забанят?<span class="faq-arrow"></span></button>
+                    <div class="faq-a"><p>Мы не можем гарантировать отсутствие бана на всех серверах. Используй обходы аккуратно и не включай всё сразу на серверах с античитом.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">Как сохранить настройки?<span class="faq-arrow"></span></button>
+                    <div class="faq-a"><p>Открой меню клиента → вкладка «Конфиги». Сохрани конфиг под своим именем или загрузи готовый пресет PVP / PVE / Anarchy.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">Как сменить тему меню?<span class="faq-arrow"></span></button>
+                    <div class="faq-a"><p>В меню клиента открой «Внешний вид» → «Темы» и выбери понравившуюся. Акцентная подсветка обновится сразу.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">Клиент платный?<span class="faq-arrow"></span></button>
+                    <div class="faq-a"><p>Сейчас клиент бесплатный. Следи за нашим Discord, чтобы узнавать о новых версиях и обновлениях.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="brand">
+                <img class="brand-logo" src="img/logo.png" alt="EnvyClient">
+                <span class="brand-name">ENVY<span class="brand-accent">CLIENT</span></span>
+            </div>
+            <p>© 2026 EnvyClient. Клиент в альфа-тестировании. Не связан с Mojang Studios. Minecraft — товарный знак Mojang AB.</p>
+            <div class="footer-links">
+                <a href="#">Discord</a>
+                <a href="#install">Установка</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
