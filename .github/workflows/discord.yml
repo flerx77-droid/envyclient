@@ -14,6 +14,12 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
+      - name: Verify webhook secret
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          echo "webhook length: ${#WEBHOOK}"
+          echo "webhook prefix: ${WEBHOOK:0:30}"
       - name: Post to Discord
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
@@ -35,7 +41,7 @@ jobs:
           req = urllib.request.Request(
               os.environ["WEBHOOK"],
               data=json.dumps(data, ensure_ascii=False).encode("utf-8"),
-              headers={"Content-Type": "application/json"},
+              headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0 EnvyClient-Release"},
               method="POST",
           )
           resp = urllib.request.urlopen(req)
