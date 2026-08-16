@@ -21,12 +21,12 @@ GitHub Pages подхватит изменения автоматически з
 
 Как выпустить новую версию лаунчера
 -------------------------------------
-1. Собери:  C:\Users\user\Desktop\wyvern-dlc\launcher
+1. Собери:  C:\Users\user\Desktop\envyclient-dlc\launcher
    cd launcher
    $env:CSC_IDENTITY_AUTO_DISCOVERY = "false"
    npm run dist
-2. Поставь иконку (необязательно, если не менялась):
-   ResourceHacker.exe -open "dist\EnvyClient Setup.exe" -save "dist\EnvyClient Setup.exe" -action addoverwrite -res resources\icon.ico -mask "ICONGROUP,MAINICON," -log NUL
-3. Создай новый релиз с новым тегом (v1.0.1 и т.д.) и залей новый exe.
+   Иконка на приложение ставится автоматически (хук afterPack).
+   Установщик появится в dist\EnvyClient Setup.exe.
+2. Создай новый релиз с новым тегом (v1.0.1 и т.д.) и залей новый exe.
    Тогда кнопка на сайте продолжит работать через "latest" без правок сайта:
    .../releases/latest/download/...
