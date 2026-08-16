@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,15 @@
     <meta name="description" content="EnvyClient — премиальный клиент для Minecraft 1.21.4. Чистые обходы, продвинутый HUD, система конфигов и максимальный FPS. Сейчас в альфа-тестировании.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <canvas id="stars"></canvas>
+    <div class="bg">
+        <div class="aurora-wrap"><div class="aurora"></div></div>
+        <div class="grid"></div>
+        <div class="scan"></div>
+    </div>
 
     <header class="nav">
         <div class="nav-inner">
@@ -23,38 +27,50 @@
                 <a href="#features">Возможности</a>
                 <a href="#modules">Модули</a>
                 <a href="#hud">HUD</a>
-                <a href="#screenshots">Скриншоты</a>
                 <a href="#install">Установка</a>
                 <a href="#faq">FAQ</a>
             </nav>
-            <a href="https://github.com/flerx77-droid/envyclient/releases/latest/download/EnvyClient-Setup.exe" class="btn btn-accent nav-download">Скачать</a>
+            <div class="nav-actions">
+                <span class="nav-ver mono">v1.2.0</span>
+                <a href="https://discord.gg/hza5KFQaM" target="_blank" rel="noopener" class="nav-discord">Discord</a>
+                <a href="https://github.com/flerx77-droid/envyclient/releases/latest/download/EnvyClient-Setup.exe" class="btn btn-accent nav-download">Скачать</a>
+            </div>
         </div>
     </header>
 
     <main id="top">
         <!-- HERO -->
         <section class="hero">
-            <div class="hero-glow"></div>
             <div class="hero-inner reveal">
-                <span class="hero-badge">ALPHA · v1.0 · Minecraft 1.21.4</span>
+                <span class="hero-tag mono">// PREMIUM MINECRAFT CLIENT</span>
+                <span class="hero-badge mono">ALPHA · v1.2.0 · MC 1.21.4</span>
                 <h1 class="hero-title">ENVY<span class="accent">CLIENT</span></h1>
                 <p class="hero-sub">Премиальный клиент для Minecraft 1.21.4 с собственным лаунчером.
-                    Чистые обходы античитов, кастомный HUD с двумя режимами, система конфигов
+                    Чистые обходы античитов, кастомный HUD, система конфигов
                     и максимальный FPS.</p>
                 <div class="hero-actions">
                     <a href="https://github.com/flerx77-droid/envyclient/releases/latest/download/EnvyClient-Setup.exe" class="btn btn-accent btn-lg">Скачать лаунчер</a>
                     <a href="#install" class="btn btn-ghost btn-lg">Как установить</a>
                 </div>
+
+                <div class="sys-bar mono">
+                    <span class="sys-dot"></span><span>STATUS: ONLINE</span>
+                    <span class="sep"></span><span>VERSION: v1.2.0</span>
+                    <span class="sep"></span><span>GAME: 1.21.4</span>
+                    <span class="sep"></span><span>LOADER: FABRIC</span>
+                </div>
+
                 <div class="hero-shot">
                     <div class="hero-shot-frame">
                         <img src="img/menu.png" alt="Меню EnvyClient">
                     </div>
                 </div>
+
                 <div class="hero-stats">
-                    <div class="stat"><span class="stat-num">76</span><span class="stat-label">модулей</span></div>
-                    <div class="stat"><span class="stat-num">5</span><span class="stat-label">категорий</span></div>
-                    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">тем меню</span></div>
-                    <div class="stat"><span class="stat-num">3</span><span class="stat-label">пресета конфигов</span></div>
+                    <div class="stat"><span class="stat-num mono">76</span><span class="stat-label">модулей</span></div>
+                    <div class="stat"><span class="stat-num mono">5</span><span class="stat-label">категорий</span></div>
+                    <div class="stat"><span class="stat-num mono">10+</span><span class="stat-label">тем меню</span></div>
+                    <div class="stat"><span class="stat-num mono">3</span><span class="stat-label">пресета конфигов</span></div>
                 </div>
             </div>
         </section>
@@ -75,7 +91,7 @@
         <!-- FEATURES -->
         <section id="features" class="section">
             <div class="section-head reveal">
-                <span class="section-tag">Возможности</span>
+                <span class="section-tag mono">// Возможности</span>
                 <h2 class="section-title">Всё для победы</h2>
                 <p class="section-sub">Каждая деталь клиента сделана так, чтобы давать преимущество и выглядеть дорого.</p>
             </div>
@@ -116,7 +132,7 @@
         <!-- MODULES -->
         <section id="modules" class="section section-alt">
             <div class="section-head reveal">
-                <span class="section-tag">Модули</span>
+                <span class="section-tag mono">// Модули</span>
                 <h2 class="section-title">76 модулей в 5 категориях</h2>
                 <p class="section-sub">От комбата до рендера — мощная база для любых ситуаций.</p>
             </div>
@@ -182,7 +198,7 @@
         <!-- HUD -->
         <section id="hud" class="section">
             <div class="section-head reveal">
-                <span class="section-tag">HUD</span>
+                <span class="section-tag mono">// HUD</span>
                 <h2 class="section-title">Два режима. Один стиль.</h2>
                 <p class="section-sub">Выбери классическое стекло или плоский современный вид — и перетаскивай элементы куда хочешь.</p>
             </div>
@@ -205,7 +221,7 @@
         <!-- SCREENSHOTS -->
         <section id="screenshots" class="section section-alt">
             <div class="section-head reveal">
-                <span class="section-tag">Скриншоты</span>
+                <span class="section-tag mono">// Скриншоты</span>
                 <h2 class="section-title">Взгляни на клиент</h2>
                 <p class="section-sub">Меню, которое появляется при первом входе. Больше скриншотов добавим по мере тестирования.</p>
             </div>
@@ -230,23 +246,23 @@
         <!-- INSTALL -->
         <section id="install" class="section">
             <div class="section-head reveal">
-                <span class="section-tag">Установка</span>
+                <span class="section-tag mono">// Установка</span>
                 <h2 class="section-title">Играть за 3 шага</h2>
                 <p class="section-sub">Лаунчер сам скачает Minecraft 1.21.4, Fabric и все модули. Никакой ручной установки модов.</p>
             </div>
             <div class="steps">
                 <div class="step reveal">
-                    <span class="step-num">1</span>
+                    <span class="step-num mono">1</span>
                     <h3>Скачай лаунчер</h3>
-                    <p>Нажми «Скачать лаунчер» и запусти <code>EnvyClient-Setup-1.0.0.exe</code> — установщик сделает всё сам.</p>
+                    <p>Нажми «Скачать лаунчер» и запусти <code>EnvyClient-Setup.exe</code> — установщик сделает всё сам.</p>
                 </div>
                 <div class="step reveal">
-                    <span class="step-num">2</span>
+                    <span class="step-num mono">2</span>
                     <h3>Запусти и настрой</h3>
                     <p>Открой <code>EnvyClient.exe</code>, введи ник и выбери объём оперативной памяти.</p>
                 </div>
                 <div class="step reveal">
-                    <span class="step-num">3</span>
+                    <span class="step-num mono">3</span>
                     <h3>Играй</h3>
                     <p>Нажми «Играть» — лаунчер скачает и запустит всё сам. В игре меню клиента — клавиша <b>RShift</b>.</p>
                 </div>
@@ -256,7 +272,7 @@
         <!-- FAQ -->
         <section id="faq" class="section">
             <div class="section-head reveal">
-                <span class="section-tag">FAQ</span>
+                <span class="section-tag mono">// FAQ</span>
                 <h2 class="section-title">Частые вопросы</h2>
             </div>
             <div class="faq">

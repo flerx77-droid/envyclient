@@ -39,44 +39,19 @@
         });
     });
 
-    // starfield
-    var canvas = document.getElementById("stars");
-    var ctx = canvas.getContext("2d");
-    var stars = [];
-    var W, H;
-
-    function resize() {
-        W = canvas.width = window.innerWidth;
-        H = canvas.height = window.innerHeight;
-    }
-    window.addEventListener("resize", resize);
-    resize();
-
-    for (var i = 0; i < 120; i++) {
-        stars.push({
-            x: Math.random() * W,
-            y: Math.random() * H,
-            r: Math.random() * 1.3 + 0.3,
-            s: Math.random() * 0.25 + 0.05,
-            o: Math.random()
+    // aurora parallax на мышь
+    var auroraWrap = document.querySelector(".aurora-wrap");
+    if (auroraWrap) {
+        var tx = 0, ty = 0, cx = 0, cy = 0;
+        window.addEventListener("mousemove", function (e) {
+            tx = (e.clientX / window.innerWidth - 0.5) * 30;
+            ty = (e.clientY / window.innerHeight - 0.5) * 30;
         });
+        (function loop() {
+            cx += (tx - cx) * 0.05;
+            cy += (ty - cy) * 0.05;
+            auroraWrap.style.transform = "translate(" + cx + "px," + cy + "px)";
+            requestAnimationFrame(loop);
+        })();
     }
-
-    function tick() {
-        ctx.clearRect(0, 0, W, H);
-        for (var i = 0; i < stars.length; i++) {
-            var st = stars[i];
-            st.y -= st.s;
-            if (st.y < -2) { st.y = H + 2; st.x = Math.random() * W; }
-            var alpha = 0.25 + Math.sin(Date.now() / 900 + i) * 0.15;
-            ctx.globalAlpha = Math.max(0.05, alpha);
-            ctx.fillStyle = "#c4b5fd";
-            ctx.beginPath();
-            ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
-            ctx.fill();
-        }
-        ctx.globalAlpha = 1;
-        requestAnimationFrame(tick);
-    }
-    tick();
 })();
