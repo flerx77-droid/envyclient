@@ -1,6 +1,9 @@
 (function () {
     "use strict";
 
+    // JS активен — включаем reveal-анимации (без JS контент виден сразу)
+    document.documentElement.classList.add("js");
+
     // nav background on scroll
     var nav = document.querySelector(".nav");
     function onScroll() {
