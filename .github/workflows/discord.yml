@@ -1,0 +1,43 @@
+name: Discord Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Тег для теста"
+        required: false
+        default: "TEST"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          BODY: ${{ github.event.release.body }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          tag = os.environ.get("TAG") or "TEST"
+          body = os.environ.get("BODY") or ""
+          data = {
+            "content": "🚀 **ENVYCLIENT " + tag + "**",
+            "embeds": [{
+              "color": 10508031,
+              "description": (body or "Новая версия лаунчера готова!")[:2000],
+              "fields": [{"name": "Скачать", "value": "https://github.com/flerx77-droid/envyclient/releases/latest/download/EnvyClient-Setup.exe"}]
+            }]
+          }
+          req = urllib.request.Request(
+              os.environ["WEBHOOK"],
+              data=json.dumps(data, ensure_ascii=False).encode("utf-8"),
+              headers={"Content-Type": "application/json"},
+              method="POST",
+          )
+          resp = urllib.request.urlopen(req)
+          print("posted", resp.status)
+          PY
