@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg: #07080a;
     --panel: #0a0b0e;
     --panel-2: #0d0e12;
@@ -58,7 +58,7 @@ a { color: inherit; text-decoration: none; }
     50%  { transform: translate(-2%, 3%) scale(1.06); }
     100% { transform: translate(2%, -2%) scale(1.02); }
 }
-.grid {
+.bg .grid {
     position: absolute; inset: 0;
     background-image:
         linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px),
