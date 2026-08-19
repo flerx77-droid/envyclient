@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnvyClient — Premium Minecraft Client</title>
-    <meta name="description" content="EnvyClient — премиальный клиент для Minecraft 1.21.4. Чистые обходы, продвинутый HUD, система конфигов и максимальный FPS. Сейчас в альфа-тестировании.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>EnvyClient — Minecraft 1.21.4</title>
+    <meta name="description" content="EnvyClient — клиент для Minecraft 1.21.4. Обходы, HUD, конфиги. Альфа-тестирование.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bg">
-        <div class="aurora-wrap"><div class="aurora"></div></div>
-        <div class="grid"></div>
-        <div class="scan"></div>
-    </div>
-
     <header class="nav">
         <div class="nav-inner">
             <a href="#top" class="brand">
                 <img class="brand-logo" src="img/logo.png" alt="EnvyClient">
-                <span class="brand-name">ENVY<span class="brand-accent">CLIENT</span></span>
+                EnvyClient
             </a>
             <nav class="nav-links">
                 <a href="#features">Возможности</a>
@@ -31,7 +22,7 @@
                 <a href="#faq">FAQ</a>
             </nav>
             <div class="nav-actions">
-                <span class="nav-ver mono">v1.2.0</span>
+                <span class="nav-ver">v1.2.0</span>
                 <a href="https://discord.gg/3ftytfwxVp" target="_blank" rel="noopener" class="nav-discord">Discord</a>
                 <a href="https://github.com/flerx77-droid/envyclient/releases/latest/download/EnvyClient-Setup.exe" class="btn btn-accent nav-download">Скачать</a>
             </div>
@@ -39,46 +30,29 @@
     </header>
 
     <main id="top">
-        <!-- HERO -->
         <section class="hero">
-            <div class="hero-inner reveal">
-                <span class="hero-tag mono">// PREMIUM MINECRAFT CLIENT</span>
-                <span class="hero-badge mono">ALPHA · v1.2.0 · MC 1.21.4</span>
-                <h1 class="hero-title">ENVY<span class="accent">CLIENT</span></h1>
-                <p class="hero-sub">Премиальный клиент для Minecraft 1.21.4 с собственным лаунчером.
-                    Чистые обходы античитов, кастомный HUD, система конфигов
-                    и максимальный FPS.</p>
+            <div class="hero-copy">
+                <p class="hero-meta">альфа · v1.2.0 · Minecraft 1.21.4 · Fabric</p>
+                <h1>EnvyClient</h1>
+                <p class="hero-sub">Клиент для Minecraft 1.21.4 со своим лаунчером. Обходы античитов, кастомный HUD, конфиги, упор на FPS.</p>
                 <div class="hero-actions">
                     <a href="https://github.com/flerx77-droid/envyclient/releases/latest/download/EnvyClient-Setup.exe" class="btn btn-accent btn-lg">Скачать лаунчер</a>
                     <a href="#install" class="btn btn-ghost btn-lg">Как установить</a>
                 </div>
-
-                <div class="sys-bar mono">
-                    <span class="sys-dot"></span><span>STATUS: ONLINE</span>
-                    <span class="sep"></span><span>VERSION: v1.2.0</span>
-                    <span class="sep"></span><span>GAME: 1.21.4</span>
-                    <span class="sep"></span><span>LOADER: FABRIC</span>
-                </div>
-
-                <div class="hero-shot">
-                    <div class="hero-shot-frame">
-                        <img src="img/menu.png" alt="Меню EnvyClient">
-                    </div>
-                </div>
-
-                <div class="hero-stats">
-                    <div class="stat"><span class="stat-num mono">76</span><span class="stat-label">модулей</span></div>
-                    <div class="stat"><span class="stat-num mono">5</span><span class="stat-label">категорий</span></div>
-                    <div class="stat"><span class="stat-num mono">10+</span><span class="stat-label">тем меню</span></div>
-                    <div class="stat"><span class="stat-num mono">3</span><span class="stat-label">пресета конфигов</span></div>
-                </div>
+                <ul class="hero-stats">
+                    <li><b>76</b> модулей</li>
+                    <li><b>5</b> категорий</li>
+                    <li><b>10+</b> тем меню</li>
+                    <li><b>3</b> пресета конфигов</li>
+                </ul>
+            </div>
+            <div class="hero-shot">
+                <img src="img/menu.png" alt="Меню EnvyClient">
             </div>
         </section>
 
-        <!-- ALPHA NOTICE -->
-        <section class="notice-wrap reveal">
+        <section class="notice-wrap">
             <div class="notice">
-                <span class="notice-icon svg svg-warn"></span>
                 <div>
                     <b>Клиент в альфа-тестировании</b>
                     <p>Возможны недоделки и недоработки. Античиты могут «жаловаться» на игроков —
@@ -88,58 +62,42 @@
             </div>
         </section>
 
-        <!-- FEATURES -->
         <section id="features" class="section">
-            <div class="section-head reveal">
-                <span class="section-tag mono">// Возможности</span>
-                <h2 class="section-title">Всё для победы</h2>
-                <p class="section-sub">Каждая деталь клиента сделана так, чтобы давать преимущество и выглядеть дорого.</p>
-            </div>
-            <div class="grid features-grid">
-                <div class="card reveal">
-                    <div class="card-icon svg svg-shield"></div>
+            <h2>Возможности</h2>
+            <div class="feat-list">
+                <article>
                     <h3>Обход античитов</h3>
                     <p>Автоматический CheckBypass: при проверке сервера модули отключаются, а после — возвращаются. Sprint-фильтр против киков spookytime.</p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon svg svg-layout"></div>
+                </article>
+                <article>
                     <h3>Кастомный HUD</h3>
                     <p>Два режима — «Classic» и «Sleek». Перетаскивание элементов, бинды, зелья, стафф-лист, таргет-худ и ватермарка.</p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon svg svg-config"></div>
+                </article>
+                <article>
                     <h3>Система конфигов</h3>
                     <p>Сохранение и загрузка конфигов прямо из меню. Готовые пресеты PVP, PVE и Anarchy, шифрование файлов.</p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon svg svg-theme"></div>
+                </article>
+                <article>
                     <h3>Темы и меню</h3>
                     <p>Продвинутый ClickGUI с анимациями и множеством тем. Выбирай акцент и кастомизируй клиент под себя.</p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon svg svg-fps"></div>
+                </article>
+                <article>
                     <h3>Оптимизация FPS</h3>
                     <p>Умные анимации без лишней нагрузки, лёгкий рендер HUD и поддержка CrystalOptimizer для PVP-сражений.</p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon svg svg-gui"></div>
+                </article>
+                <article>
                     <h3>Удобство каждый день</h3>
                     <p>AutoRespawn, AutoAccept, FreeCam, NameProtect, предметы, тотемы и уведомления — всё, что нужно для игры.</p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- MODULES -->
-        <section id="modules" class="section section-alt">
-            <div class="section-head reveal">
-                <span class="section-tag mono">// Модули</span>
-                <h2 class="section-title">76 модулей в 5 категориях</h2>
-                <p class="section-sub">От комбата до рендера — мощная база для любых ситуаций.</p>
-            </div>
-            <div class="grid modules-grid">
-                <div class="card reveal">
-                    <div class="module-head"><span class="svg svg-sword"></span><h3>Combat</h3></div>
-                    <ul class="module-list">
+        <section id="modules" class="section">
+            <h2>76 модулей в 5 категориях</h2>
+            <div class="mod-grid">
+                <div>
+                    <h3>Combat</h3>
+                    <ul>
                         <li>AttackAura</li>
                         <li>CrystallAura</li>
                         <li>AutoTotem</li>
@@ -148,9 +106,9 @@
                         <li>PacketCriticals</li>
                     </ul>
                 </div>
-                <div class="card reveal">
-                    <div class="module-head"><span class="svg svg-sprint"></span><h3>Movement</h3></div>
-                    <ul class="module-list">
+                <div>
+                    <h3>Movement</h3>
+                    <ul>
                         <li>Speed</li>
                         <li>GrimGlide</li>
                         <li>ElytraBooster</li>
@@ -159,9 +117,9 @@
                         <li>AirStuck</li>
                     </ul>
                 </div>
-                <div class="card reveal">
-                    <div class="module-head"><span class="svg svg-eye"></span><h3>Render</h3></div>
-                    <ul class="module-list">
+                <div>
+                    <h3>Render</h3>
+                    <ul>
                         <li>TargetESP</li>
                         <li>Tracers</li>
                         <li>CustomSky</li>
@@ -170,9 +128,9 @@
                         <li>ViewModel</li>
                     </ul>
                 </div>
-                <div class="card reveal">
-                    <div class="module-head"><span class="svg svg-user"></span><h3>Player</h3></div>
-                    <ul class="module-list">
+                <div>
+                    <h3>Player</h3>
+                    <ul>
                         <li>AutoTool</li>
                         <li>AutoArmor</li>
                         <li>FastBreak</li>
@@ -181,9 +139,9 @@
                         <li>AutoRespawn</li>
                     </ul>
                 </div>
-                <div class="card reveal">
-                    <div class="module-head"><span class="svg svg-misc"></span><h3>Misc</h3></div>
-                    <ul class="module-list">
+                <div>
+                    <h3>Misc</h3>
+                    <ul>
                         <li>ServerHelper</li>
                         <li>FreeCam</li>
                         <li>NameProtect</li>
@@ -195,109 +153,74 @@
             </div>
         </section>
 
-        <!-- HUD -->
         <section id="hud" class="section">
-            <div class="section-head reveal">
-                <span class="section-tag mono">// HUD</span>
-                <h2 class="section-title">Два режима. Один стиль.</h2>
-                <p class="section-sub">Выбери классическое стекло или плоский современный вид — и перетаскивай элементы куда хочешь.</p>
-            </div>
-            <div class="hud-showcase">
-                <div class="hud-item reveal">
-                    <h3>Classic</h3>
-                    <div class="hud-shot-frame">
-                        <img src="img/hud-classic.png" alt="HUD Classic EnvyClient">
-                    </div>
-                </div>
-                <div class="hud-item reveal">
-                    <h3>Sleek</h3>
-                    <div class="hud-shot-frame">
-                        <img src="img/hud-sleek.png" alt="HUD Sleek EnvyClient">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SCREENSHOTS -->
-        <section id="screenshots" class="section section-alt">
-            <div class="section-head reveal">
-                <span class="section-tag mono">// Скриншоты</span>
-                <h2 class="section-title">Взгляни на клиент</h2>
-                <p class="section-sub">Меню, которое появляется при первом входе. Больше скриншотов добавим по мере тестирования.</p>
-            </div>
-            <div class="gallery">
-                <figure class="gallery-item reveal">
-                    <img src="img/menu.png" alt="Меню EnvyClient при первом входе">
-                    <figcaption>Главное меню клиента — первый вход</figcaption>
+            <h2>HUD</h2>
+            <p class="lead">Classic или Sleek. Элементы можно таскать по экрану.</p>
+            <div class="shots">
+                <figure>
+                    <img src="img/hud-classic.png" alt="HUD Classic EnvyClient">
+                    <figcaption>Classic</figcaption>
                 </figure>
-                <div class="gallery-grid">
-                    <figure class="gallery-item reveal">
-                        <img src="img/hud-classic.png" alt="HUD Classic">
-                        <figcaption>HUD Classic</figcaption>
-                    </figure>
-                    <figure class="gallery-item reveal">
-                        <img src="img/hud-sleek.png" alt="HUD Sleek">
-                        <figcaption>HUD Sleek</figcaption>
-                    </figure>
-                </div>
+                <figure>
+                    <img src="img/hud-sleek.png" alt="HUD Sleek EnvyClient">
+                    <figcaption>Sleek</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- INSTALL -->
+        <section id="screenshots" class="section">
+            <h2>Скриншоты</h2>
+            <p class="lead">Меню при первом входе. Остальное добавим по ходу теста.</p>
+            <figure class="shot-wide">
+                <img src="img/menu.png" alt="Меню EnvyClient при первом входе">
+                <figcaption>Главное меню — первый вход</figcaption>
+            </figure>
+        </section>
+
         <section id="install" class="section">
-            <div class="section-head reveal">
-                <span class="section-tag mono">// Установка</span>
-                <h2 class="section-title">Играть за 3 шага</h2>
-                <p class="section-sub">Лаунчер сам скачает Minecraft 1.21.4, Fabric и все модули. Никакой ручной установки модов.</p>
-            </div>
-            <div class="steps">
-                <div class="step reveal">
-                    <span class="step-num mono">1</span>
+            <h2>Установка</h2>
+            <p class="lead">Лаунчер сам качает Minecraft 1.21.4, Fabric и модули.</p>
+            <ol class="steps">
+                <li>
                     <h3>Скачай лаунчер</h3>
                     <p>Нажми «Скачать лаунчер» и запусти <code>EnvyClient-Setup.exe</code> — установщик сделает всё сам.</p>
-                </div>
-                <div class="step reveal">
-                    <span class="step-num mono">2</span>
+                </li>
+                <li>
                     <h3>Запусти и настрой</h3>
                     <p>Открой <code>EnvyClient.exe</code>, введи ник и выбери объём оперативной памяти.</p>
-                </div>
-                <div class="step reveal">
-                    <span class="step-num mono">3</span>
+                </li>
+                <li>
                     <h3>Играй</h3>
                     <p>Нажми «Играть» — лаунчер скачает и запустит всё сам. В игре меню клиента — клавиша <b>RShift</b>.</p>
-                </div>
-            </div>
+                </li>
+            </ol>
         </section>
 
-        <!-- FAQ -->
         <section id="faq" class="section">
-            <div class="section-head reveal">
-                <span class="section-tag mono">// FAQ</span>
-                <h2 class="section-title">Частые вопросы</h2>
-            </div>
+            <h2>FAQ</h2>
             <div class="faq">
-                <div class="faq-item reveal">
-                    <button class="faq-q">Клиент стабильный? Это альфа?<span class="faq-arrow"></span></button>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">Клиент стабильный? Это альфа?<span class="faq-arrow"></span></button>
                     <div class="faq-a"><p>Сейчас идёт <b>альфа-тестирование</b>: возможны недоделки и недоработки. Античиты могут «жаловаться» на игроков. Используя клиент, ты принимаешь ответственность на себя — автор за баны и последствия не отвечает.</p></div>
                 </div>
-                <div class="faq-item reveal">
-                    <button class="faq-q">Как запустить клиент?<span class="faq-arrow"></span></button>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">Как запустить клиент?<span class="faq-arrow"></span></button>
                     <div class="faq-a"><p>Скачай лаунчер и нажми «Играть». Он сам скачает Minecraft 1.21.4, Fabric и модули — ничего ставить вручную не нужно. Нужна установленная Java 17+.</p></div>
                 </div>
-                <div class="faq-item reveal">
-                    <button class="faq-q">Это безопасно? Меня забанят?<span class="faq-arrow"></span></button>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">Это безопасно? Меня забанят?<span class="faq-arrow"></span></button>
                     <div class="faq-a"><p>Мы не можем гарантировать отсутствие бана на всех серверах. Используй обходы аккуратно и не включай всё сразу на серверах с античитом.</p></div>
                 </div>
-                <div class="faq-item reveal">
-                    <button class="faq-q">Как сохранить настройки?<span class="faq-arrow"></span></button>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">Как сохранить настройки?<span class="faq-arrow"></span></button>
                     <div class="faq-a"><p>Открой меню клиента → вкладка «Конфиги». Сохрани конфиг под своим именем или загрузи готовый пресет PVP / PVE / Anarchy.</p></div>
                 </div>
-                <div class="faq-item reveal">
-                    <button class="faq-q">Как сменить тему меню?<span class="faq-arrow"></span></button>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">Как сменить тему меню?<span class="faq-arrow"></span></button>
                     <div class="faq-a"><p>В меню клиента открой «Внешний вид» → «Темы» и выбери понравившуюся. Акцентная подсветка обновится сразу.</p></div>
                 </div>
-                <div class="faq-item reveal">
-                    <button class="faq-q">Клиент платный?<span class="faq-arrow"></span></button>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">Клиент платный?<span class="faq-arrow"></span></button>
                     <div class="faq-a"><p>Сейчас клиент бесплатный. Следи за нашим Discord, чтобы узнавать о новых версиях и обновлениях.</p></div>
                 </div>
             </div>
@@ -306,11 +229,11 @@
 
     <footer class="footer">
         <div class="footer-inner">
-            <div class="brand">
+            <a href="#top" class="brand">
                 <img class="brand-logo" src="img/logo.png" alt="EnvyClient">
-                <span class="brand-name">ENVY<span class="brand-accent">CLIENT</span></span>
-            </div>
-            <p>© 2026 EnvyClient. Клиент в альфа-тестировании. Не связан с Mojang Studios. Minecraft — товарный знак Mojang AB.</p>
+                EnvyClient
+            </a>
+            <p>© 2026 EnvyClient. Альфа. Не связан с Mojang Studios. Minecraft — товарный знак Mojang AB.</p>
             <div class="footer-links">
                 <a href="https://discord.gg/hza5KFQaM" target="_blank" rel="noopener">Discord</a>
                 <a href="#install">Установка</a>
